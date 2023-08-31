@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "sourceMap": true,
+        "target": "ES5",
+        "module": "AMD",
+        "outFile": "web/js/tictactoe.js",
+    },
+    "compileOnSave": true
+}

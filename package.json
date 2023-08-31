@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "dev": "node_modules/live-server/live-server.js --mount=/src:src web & node_modules/typescript/bin/tsc -w"
+  }
+}
