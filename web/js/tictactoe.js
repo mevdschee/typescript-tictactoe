@@ -174,16 +174,28 @@ define("Player", ["require", "exports", "Board"], function (require, exports, Bo
                 }
                 html += '<br>';
             }
+            html += '<button id="reset">Reset</button>';
             game.innerHTML = html;
             var buttons = document.querySelectorAll('button');
             buttons.forEach(function (button) {
-                button.addEventListener('click', function () {
-                    var x = parseInt(button.getAttribute('data-x'));
-                    var y = parseInt(button.getAttribute('data-y'));
-                    _this.click(x, y);
-                }, true);
+                if (button.id == "reset") {
+                    button.addEventListener('click', function () {
+                        _this.reset();
+                    }, true);
+                }
+                else {
+                    button.addEventListener('click', function () {
+                        var x = parseInt(button.getAttribute('data-x'));
+                        var y = parseInt(button.getAttribute('data-y'));
+                        _this.click(x, y);
+                    }, true);
+                }
             });
         }
+        Player.prototype.reset = function () {
+            this.board = new Board_1.Board();
+            this.redraw();
+        };
         Player.prototype.redraw = function () {
             for (var y = 0; y < this.board.size; y++) {
                 for (var x = 0; x < this.board.size; x++) {

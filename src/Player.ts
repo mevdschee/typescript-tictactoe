@@ -20,15 +20,27 @@ export class Player {
             }
             html += '<br>';
         }
+        html += '<button id="reset">Reset</button>';
         game.innerHTML = html;
         const buttons = document.querySelectorAll('button');
         buttons.forEach((button) => {
-            button.addEventListener('click', () => {
-                const x = parseInt(button.getAttribute('data-x') as string);
-                const y = parseInt(button.getAttribute('data-y') as string);
-                _this.click(x, y);
-            }, true);
+            if (button.id == "reset") {
+                button.addEventListener('click', () => {
+                    _this.reset();
+                }, true);
+            } else {
+                button.addEventListener('click', () => {
+                    const x = parseInt(button.getAttribute('data-x') as string);
+                    const y = parseInt(button.getAttribute('data-y') as string);
+                    _this.click(x, y);
+                }, true);
+            }
         });
+    }
+
+    public reset(): void {
+        this.board = new Board();
+        this.redraw();
     }
 
     public redraw(): void {
