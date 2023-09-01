@@ -1,4 +1,4 @@
-# typescript-tictactoe
+# TicTacToe in TypeScript
 
 ![screenshot](screenshot.png)
 
