@@ -1,5 +1,7 @@
 # typescript-tictactoe
 
+![screenshot](screenshot.png)
+
 This is TicTacToe written in TypeScript. I ported the code from my previous [Python implementation](https://github.com/mevdschee/python-tictactoe).
 
 ### Motivation
