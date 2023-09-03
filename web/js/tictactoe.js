@@ -201,7 +201,7 @@ define("Player", ["require", "exports", "Board"], function (require, exports, Bo
                 for (var x = 0; x < this.board.size; x++) {
                     var button = document.getElementById('button_' + x + '_' + y);
                     button.innerHTML = this.board.fields[y][x];
-                    button.style.color = 'auto';
+                    button.style.color = 'inherit';
                 }
             }
         };

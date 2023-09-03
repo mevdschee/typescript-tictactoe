@@ -48,7 +48,7 @@ export class Player {
             for (var x = 0; x < this.board.size; x++) {
                 const button = document.getElementById('button_' + x + '_' + y) as HTMLElement;
                 button.innerHTML = this.board.fields[y][x];
-                button.style.color = 'auto';
+                button.style.color = 'inherit';
             }
         }
     }
